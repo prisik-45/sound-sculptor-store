@@ -38,7 +38,7 @@ export const Route = createFileRoute("/products/$slug")({
 const TABS = ["Description", "Additional Info", "Installation", "Reviews"] as const;
 
 function ProductDetail() {
-  const { product } = Route.useLoaderData();
+  const { product } = Route.useLoaderData() as { product: Product };
   const [img, setImg] = useState(product.image);
   const [thickness, setThickness] = useState(product.thicknessOptions?.[0] ?? "");
   const [size, setSize] = useState(product.sizeOptions?.[0] ?? "");
