@@ -19,9 +19,21 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/70 bg-background/85 backdrop-blur-md">
       <div className="container-page flex h-16 items-center justify-between gap-6">
-        <Link to="/" className="flex items-center gap-2">
-          <span className="text-lg font-bold tracking-tight text-ink md:text-xl">
-            Tarkshy<span className="text-primary">.</span>Acoustic
+        <Link to="/" className="group flex items-center gap-2.5">
+          <span
+            aria-hidden="true"
+            className="relative flex h-9 w-9 items-center justify-center rounded-md bg-ink text-background shadow-sm ring-1 ring-ink/10 transition-transform group-hover:-rotate-3"
+          >
+            <span className="font-serif text-[18px] font-bold leading-none tracking-tight">T</span>
+            <span className="absolute -bottom-0.5 -right-0.5 h-1.5 w-1.5 rounded-full bg-primary" />
+          </span>
+          <span className="flex flex-col leading-none">
+            <span className="text-[15px] font-semibold uppercase tracking-[0.22em] text-ink md:text-base">
+              Tarkshy
+            </span>
+            <span className="mt-1 text-[10px] font-medium uppercase tracking-[0.32em] text-ink-soft">
+              Acoustic<span className="text-primary"> · </span>Studio
+            </span>
           </span>
         </Link>
 
